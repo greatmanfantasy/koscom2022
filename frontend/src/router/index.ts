@@ -16,7 +16,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/test',
     redirect: { name: 'test' },
   },
-
+  {
+    path: '/login',
+    redirect: { name: 'login' },
+  },
   {
     name: 'admin',
     path: '/admin',

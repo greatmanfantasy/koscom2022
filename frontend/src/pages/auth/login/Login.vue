@@ -4,7 +4,7 @@
       v-model="email"
       class="mb-3"
       type="email"
-      :label="t('auth.email')"
+      label="아이디"
       :error="!!emailErrors.length"
       :error-messages="emailErrors"
     />
@@ -13,18 +13,18 @@
       v-model="password"
       class="mb-3"
       type="password"
-      :label="t('auth.password')"
+      label="비밀번호"
       :error="!!passwordErrors.length"
       :error-messages="passwordErrors"
     />
 
     <div class="auth-layout__options d-flex align--center justify--space-between">
-      <va-checkbox v-model="keepLoggedIn" class="mb-0" :label="t('auth.keep_logged_in')" />
-      <router-link class="ml-1 link" :to="{ name: 'recover-password' }">{{ t('auth.recover_password') }}</router-link>
+      <va-checkbox v-model="keepLoggedIn" class="mb-0" label="로그인 유지" />
+      <router-link class="ml-1 link" to="{ name: 'recover-password' }">비밀번호 복구</router-link>
     </div>
 
     <div class="d-flex justify--center mt-3">
-      <va-button class="my-0" @click="onsubmit">{{ t('auth.login') }}</va-button>
+      <va-button class="my-0" @click="onsubmit">로그인</va-button>
     </div>
   </form>
 </template>
@@ -43,12 +43,14 @@
 
   const formReady = computed(() => !emailErrors.value.length && !passwordErrors.value.length)
 
+  const router = useRouter();
+
   function onsubmit() {
     if (!formReady.value) return
 
     emailErrors.value = email.value ? [] : ['Email is required']
     passwordErrors.value = password.value ? [] : ['Password is required']
 
-    useRouter().push({ name: 'dashboard' })
+    router.push({ name: 'dashboard' })
   }
 </script>
