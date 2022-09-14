@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="금세: 직장인을 위한 금융 절세 플랫폼"/>
+  <img alt="Vue logo" src="./assets/image_main_icon.png">
+  <h1>금세: 직장인을 위한 금융 절세 플랫폼</h1>
 </template>
 
 <script>
