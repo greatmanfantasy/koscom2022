@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/image_main_icon.png">
-  <h1>금세: 직장인을 위한 금융 절세 플랫폼</h1>
+  <router-view />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup lang="ts">
+  import { useTheme } from './services/vuestic-ui/themes'
+  useTheme()
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import 'scss/main.scss';
+
+  #app {
+    font-family: 'Source Sans Pro', Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  body {
+    margin: 0;
+    background: var(--va-background);
+  }
 </style>
