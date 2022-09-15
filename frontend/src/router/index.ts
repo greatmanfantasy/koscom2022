@@ -12,7 +12,7 @@ import Dashboard from '../pages/admin/dashboard/Dashboard.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/:catchAll(.*)',
-    redirect: { name: 'dashboard' },
+    redirect: { name: 'login' },
   },
   {
     path: '/test',
@@ -21,10 +21,6 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/login',
     redirect: { name: 'login' },
-  },
-  {
-    path: '/logintest',
-    component: Dashboard,
   },
   // 404 page
   // {
