@@ -11,14 +11,19 @@
                             <va-card-content>
                                 <div class="grid row">
                                     <div class="flex md12" style="text-align: center; font-size:24px;">
-                                        <b>금세</b> 에 필요한 인건님의 정보를 입력해 주세요
-                                    </div>
-                                    <div class="flex md2">
-                                        <div> 연소득 : </div>
+                                        <font size=6><b>금세</b></font> 에 필요한 <b>인건</b>님의 정보를 입력해 주세요
                                     </div>
 
-                                    <div class="flex md8">
+                                    <div class="flex md2">
+                                        <div><font size=5>연소득 :</font></div>
+                                    </div>
+
+                                    <div class="flex md4">
                                         <va-input v-model="salary" placeholder="" />
+                                    </div>
+
+                                    <div class="flex md1">
+                                        <div><font size=5>원</font></div>
                                     </div>
                                 </div>
                                     
