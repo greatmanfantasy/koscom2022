@@ -1,6 +1,9 @@
 <template>
     <div class="dashboard">
         <div class="grid row">
+
+            <div class="flex md12" style="height: 300px;"></div>
+            
             <div class="flex md6 offset--md3">
                 <div class="row column">
                         <va-card>
