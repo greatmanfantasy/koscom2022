@@ -84,6 +84,7 @@
   $tabletBreakPointPX: 768px;
 
   .app-layout {
+    // background-color: #C0C0C0;
     height: 100vh;
     display: flex;
     flex-direction: column;
