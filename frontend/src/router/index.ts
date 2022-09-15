@@ -47,6 +47,12 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('../pages/admin/mypage/inputSalary.vue'),
       },
       {
+        name: 'loading',
+        path: 'loading',
+        component: () => import('../pages/admin/mypage/loading.vue'),
+      },
+
+      {
         name: 'anticipate',
         path: 'anticipate',
         component: () => import('../pages/admin/mypage/anticipate.vue'),
