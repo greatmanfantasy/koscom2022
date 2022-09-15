@@ -1,8 +1,9 @@
 <template>
   <div class="auth-layout row align-content--center">
     <div class="flex xs12 pa-3 flex-center">
-      <router-link class="py-5 flex-center" to="/">
-        <vuestic-logo height="32" />
+      <router-link class="flex-center">
+        <img alt="Vuestic UI Logo" width="100" src="/title_icon.png">
+        <vuestic-logo height="32" />        
       </router-link>
     </div>
 
