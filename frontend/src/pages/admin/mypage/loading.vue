@@ -2,13 +2,18 @@
     <div class="dashboard">
         <div class="grid row">
 
-            <div class="flex xs12 md12">
+            <div class="flex md6 offset--md3">
                 <div class="row column">
                     <div class="flex">
                         <va-card>
-                            <va-card-title>로딩중</va-card-title>
                             <va-card-content>
-                                <va-progress-circle indeterminate />
+                                <div class="flex md12" style="text-align: center; font-size:24px;">
+                                    인건님의 정보를 불러오고 있어요
+                                </div>
+                                <div class="flex md12">
+                                    <va-progress-circle  :thickness="0.3" indeterminate/>
+                                </div>
+
                             </va-card-content>
                         </va-card>
 
@@ -47,7 +52,7 @@ function getStatusColor(status: string) {
     return 'danger'
 }
 
-  
+
 function onsubmit() {
     router.push({ name: 'anticipate' })
 }
