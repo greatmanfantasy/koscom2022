@@ -2,12 +2,14 @@
     <div class="dashboard">
         <div class="grid row">
 
-            <div class="flex xs12 md12">
+            <div class="flex md6 offset--md3">
                 <div class="row column">
                     <div class="flex">
                         <va-card>
                             <va-card-title>나의 금융정보 불러오기</va-card-title>
                             <va-card-content>
+
+                                
                                 <div class="table-wrapper">
                                     <table class="va-table va-table--striped va-table--hoverable">
                                         <thead>

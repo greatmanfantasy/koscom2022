@@ -2,41 +2,33 @@
   <div class="dashboard">
     <div class="grid row">
 
-      <div class="flex xs12 md6">
+      <div class="flex md6 offset--md3">
         <div class="row column">
           <div class="flex">
             <va-card class="larger-padding">
-              <va-card-title> 나의 금융정보 불러오기</va-card-title>
+              <va-card-content>
+                <div class="flex md12" style="text-align: center; font-size:24px;">
+                                        첫 화면
+                                    </div>
+              </va-card-content>
             </va-card>
           </div>
 
-          <div class="flex">
-            <va-card class="larger-padding">
-              <va-card-title> 세금 예측</va-card-title>
-            </va-card>
+          <div style="height: 60px;">
+            
           </div>
-
-          <div class="flex">
-            <va-card class="larger-padding">
-              <va-card-title> 전세 솔루션</va-card-title>
-            </va-card>
-          </div>
-
-          <div class="flex">
-            <va-card class="larger-padding">
-              <va-card-title> 사이트 정보 </va-card-title>
-            </va-card>
-          </div>
-
         </div>
       </div>
 
     </div>
 
-    <div class="flex xs12 md12">
-      <va-button class="mr-2 mb-2" @click="onsubmit"> 다음 </va-button>
+    <div class="flex xs12">
+      <div class="row">
+        <div style="position: relative; left: 50%; transform: translateX(-50%);">
+          <va-button class="mr-2 mb-2" @click="onsubmit"> 다음 </va-button>
+        </div>
+      </div>
     </div>
-
 
   </div>
 </template>

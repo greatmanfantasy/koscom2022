@@ -2,12 +2,15 @@
     <div class="dashboard">
         <div class="grid row">
 
-            <div class="flex xs12 md12">
+            <div class="flex md6 offset--md3">
                 <div class="row column">
                     <div class="flex">
                         <va-card>
-                            <va-card-title>000님의 맞춤 절세 솔루션</va-card-title>
                             <va-card-content>
+                                <div class="flex md12" style="text-align: center; font-size:24px;">
+                                        인건님의 맞춤 절세 솔루션
+                                    </div>
+
                                 <div class="grid row">
                                     <div class="flex xs12 md1">
                                         <div class="text-align-center"> 청약 </div>

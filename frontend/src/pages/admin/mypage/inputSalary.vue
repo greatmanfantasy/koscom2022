@@ -2,18 +2,20 @@
     <div class="dashboard">
         <div class="grid row">
 
-            <div class="flex xs12 md12">
+            <div class="flex md6 offset--md3">
                 <div class="row column">
                     <div class="flex">
                         <va-card>
-                            <va-card-title>고객님의 정보를 입력하세요</va-card-title>
                             <va-card-content>
                                 <div class="grid row">
-                                    <div class="flex xs12 md1">
-                                        <div class="text-align-center"> 연소득 : </div>
+                                    <div class="flex md12" style="text-align: center; font-size:24px;">
+                                        고객님의 정보를 입력하세요
+                                    </div>
+                                    <div class="flex md2">
+                                        <div> 연소득 : </div>
                                     </div>
 
-                                    <div class="flex xs12 md6">
+                                    <div class="flex md8">
                                         <va-input v-model="salary" placeholder="연봉" />
                                     </div>
                                 </div>
@@ -61,7 +63,7 @@ function getStatusColor(status: string) {
 
 
 function onsubmit() {
-    router.push({ name: 'anticipate' })
+    router.push({ name: 'terms_agree' })
 }
 
 const props = defineProps({
@@ -72,6 +74,10 @@ const props = defineProps({
 </script>
   
 <style lang="scss">
+// .app-layout{
+//     background-color: #C0C0C0;
+// }
+
 .row-equal .flex {
     .va-card {
         height: 100%;
@@ -88,7 +94,6 @@ const props = defineProps({
             justify-content: space-between;
         }
     }
-
     // .va-button {
     //     color: #FFFFFF;
     // }
