@@ -59,7 +59,7 @@ function onsubmit() {
 
 
 setTimeout(function(that){
-    if (router.currentRoute.value.name == 'Loading') {
+    if (router.currentRoute.value.name == 'Loading' || router.currentRoute.value.name == 'loading') {
         router.push({ name: 'anticipate'});
     } else{
         console.log(router.currentRoute.value.name)
