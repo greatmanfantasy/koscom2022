@@ -2,79 +2,36 @@
     <div class="dashboard">
         <div class="grid row">
 
-            <div class="flex md6 offset--md3">
+            <div class="flex md8 offset--md2">
                 <div class="row column">
                     <div class="flex">
-                        <va-card>
+                        <va-card no-padding-h style="overflow-x: auto" class="timelines__horizontal-long">
                             <va-card-content>
-                                <div class="flex md12" style="text-align: center; font-size:24px;">
-                                    인건님의 예상 환급금액
-                                </div>
-
-                                <div class="flex md12" style="text-align: center; font-size:30px;">
-                                    <b>1,232,300 </b> 원 추가납부
-                                </div>
-
-                                <div class="flex md12" style="text-align: center; font-size:20px;">
-                                    예상세액 : 25,630,000 예상납부세액 : 24,080,000
-                                </div>
-
-                                <!-- <div>
-                                    <va-card>
-                                        <va-card-title></va-card-title>
-                                        <va-card-content>
-                                            <va-accordion v-model="basicAccordionValue1">
-                                                <va-collapse header="상세내역">
-                                                    <div class="pa-3">
-                                                        <div>
-                                                            text1
-                                                        </div>
-                                                    </div>
-                                                </va-collapse>
-                                            </va-accordion>
-
-                                            <va-accordion v-model="basicAccordionValue2">
-                                                <va-collapse header="나의 절세 현황">
-                                                    <va-list>
-                                                        <va-list-label>
-                                                            test 화면
-                                                        </va-list-label>
-
-                                                        <va-list-item class="mb-2" clickable>
-                                                            <va-list-item-section>
-                                                                <va-list-item-label>Add profile images
-                                                                </va-list-item-label>
-
-                                                                <va-list-item-label caption>You can use PNG or JPG
-                                                                    files.</va-list-item-label>
-                                                            </va-list-item-section>
-                                                        </va-list-item>
-
-                                                        <va-list-item clickable>
-                                                            <va-list-item-section>
-                                                                <va-list-item-label>Invite friends</va-list-item-label>
-
-                                                                <va-list-item-label caption>You can send invitations via
-                                                                    email or any messenger.</va-list-item-label>
-                                                            </va-list-item-section>
-                                                        </va-list-item>
-
-                                                        <va-list-separator fit spaced />
-
-                                                    </va-list>
-                                                </va-collapse>
-                                            </va-accordion>
-
-                                        </va-card-content>
-                                    </va-card>
-
-                                </div> -->
-
+                                <va-timeline align-top style="min-width: 600px" class="timelines__horizontal-long__timeline">
+                                    <va-timeline-item active>
+                                        <template #before>
+                                            <div class="text--center">
+                                                <font size="5"><b>인건</b>님의 예상 환급금액</font>
+                                            </div>
+                                        </template>
+                                        <template #after>
+                                        <va-card stripe stripe-color="warning" class="mb-0">
+                                            <br><br>
+                                            <div style="text-align:center;">
+                                                <font size="40"><strong>1,232,300 원 추가납부</strong></font>
+                                            </div>
+                                            <va-card-content>
+                                                <div class="text--center">
+                                                    <font size="4">예상세액 : 25,630,000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 예상납부세액 : 24,080,000</font>
+                                                </div>
+                                            </va-card-content>
+                                        </va-card>
+                                        </template>
+                                    </va-timeline-item>
+                                </va-timeline>
                             </va-card-content>
                         </va-card>
-
                     </div>
-
                 </div>
             </div>
 
@@ -84,28 +41,37 @@
                     <div class="flex">
                         <va-card>
                             <va-card-content>
-                                <div>상세내역</div>
-                                <div>근로소득세 23,000,000 원</div>
-                                <div>이자소득세 470,000 원</div>
-                                <div>
-                                    <div>▼ (예상)배당소득세 23,500원</div>
-                                    <div>- 삼성전자 57,000원 20주</div>
-                                    <div>12월 배당예상액 : 12,000원</div>
-                                    <div>- KB금융 42,000원 15주</div>
-                                    <div>10월 배당예상액 : 5,700원</div>
-                                    <div>12월 배당예상액 : 5,800원</div>
-                                </div>
 
-                                <div>
+                                <div class="tree-view-advanced-preview">
+                                    <div class="tree-view-advanced-preview__buttons">
+                                        <va-button class="mr-2" @click="expand">EXPAND ALL</va-button>
+                                        <va-button @click="collapse">COLLAPSE ALL</va-button>
+                                    </div>
+
+                                    <div>
+                                        <font size="5"><strong>상세내역</strong></font>
+                                    </div>
                                     <br>
-                                </div>
-                                
-                                <div></div>
 
-                                <div>
-                                    <div>인적공제 160,000 원</div>
-                                    <div>기타 및 특별공제 1,009,000 원</div>
-                                </div>                                
+                                    <va-tree-view ref="treeView">
+                                        <va-tree-category label="세액">
+                                            <va-tree-node>- 근로소득세 : 23,000,000 원</va-tree-node>
+                                            <va-tree-node>- 이자소득세 : 470,000 원</va-tree-node>
+                                            <va-tree-category label="(예상)배당소득세 : 23,500 원">
+                                                <va-tree-node>■ 삼성전자 20주</va-tree-node>
+                                                <va-tree-node>--> 12월 배당예상액 : 12,000원</va-tree-node>
+                                                <va-tree-node>■ KB금융 15주</va-tree-node>
+                                                <va-tree-node>--> 10월 배당예상액 : 5,700원</va-tree-node>
+                                                <va-tree-node>--> 12월 배당예상액 : 5,800원</va-tree-node>
+                                            </va-tree-category>
+                                        </va-tree-category>
+                                        <va-tree-category label="공제">
+                                            <va-tree-node>- 인적공제 : 160,000 원</va-tree-node>
+                                            <va-tree-node>- 기타 및 특별공제 : 1,009,000 원</va-tree-node>
+                                        </va-tree-category>
+                                    </va-tree-view>
+                                </div>
+            
                             </va-card-content>
                         </va-card>
                     </div>
@@ -119,12 +85,33 @@
                     <div class="flex">
                         <va-card>
                             <va-card-content>
-                                <div>나의 절세 현황</div>
-                                <div>청약저축 : 230,000 원 공제</div>
-                                <div>연금저축 : 1,080,000 원 공제</div>
-                                <div>체크카드 : 2,756,000 원 공제</div>
-                                <div>정치기부금 : 100,000 원 공제</div>
-                                <div>대중교통 : 97,000 원 공제</div>
+
+                                <div class="tree-view-advanced-preview">
+                                    <div class="tree-view-advanced-preview__buttons">
+                                        <va-button class="mr-2" @click="expand2">EXPAND ALL</va-button>
+                                        <va-button @click="collapse2">COLLAPSE ALL</va-button>
+                                    </div>
+
+                                    <div>
+                                        <font size="5"><strong>나의 공제 현황</strong></font>
+                                    </div>
+                                    <br>
+
+                                    <va-tree-view ref="treeView2">
+                                        <va-tree-category label="금융상품">
+                                            <va-tree-node>- 청약저축 : 230,000 원 공제</va-tree-node>
+                                            <va-tree-node>- 연금저축 : 1,080,000 원 공제</va-tree-node>
+                                        </va-tree-category>
+                                        <va-tree-category label="카드소비">
+                                            <va-tree-node>- 신용카드 : 2,756,000 원 공제</va-tree-node>
+                                            <va-tree-node>- 대중교통 : 97,000 원 공제</va-tree-node>
+                                        </va-tree-category>
+                                        <va-tree-category label="기타">
+                                            <va-tree-node>- 정치기부금 : 100,000 원 공제</va-tree-node>
+                                        </va-tree-category>
+                                    </va-tree-view>
+                                </div>
+
                             </va-card-content>
                         </va-card>
                     </div>
@@ -144,6 +131,8 @@
 
     </div>
 </template>
+
+
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
@@ -174,6 +163,28 @@ function onsubmit() {
     router.push({ name: 'custom_solution' })
 }
 
+import { ref } from 'vue'
+
+    const treeView = ref()
+
+    const expand = () => {
+        treeView.value?.expand?.()
+    }
+
+    const collapse = () => {
+        treeView.value?.collapse?.()
+    }
+
+    const treeView2 = ref()
+
+    const expand2 = () => {
+        treeView2.value?.expand?.()
+    }
+
+    const collapse2 = () => {
+        treeView2.value?.collapse?.()
+    }
+
 </script>
 
 <style lang="scss">
@@ -192,6 +203,13 @@ function onsubmit() {
             display: flex;
             justify-content: space-between;
         }
+    }
+}
+
+.tree-view-advanced-preview {
+    &__buttons {
+    margin-bottom: 1rem;
+    display: flex;
     }
 }
 </style>
