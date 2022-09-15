@@ -13,31 +13,38 @@ export default {
   routes: [
     {
       name: 'dashboard',
-      displayName: '나의 금융정보 불러오기',
+      displayName: '정보입력',
       meta: {
-        // icon: 'vuestic-iconset-dashboard',
+        icon: 'vuestic-iconset-dashboards',
       },
     },
     {
       name: 'dashboard',
-      displayName: '세금 예측',
+      displayName: '금융정보 불러오기',
       meta: {
-        // icon: 'vuestic-iconset-dashboard',
+        icon: 'vuestic-iconset-dashboards',
       },
     },    
     {
       name: 'dashboard',
-      displayName: '전세 솔루션',
+      displayName: '세액 계산',
       meta: {
-        // icon: 'vuestic-iconset-dashboard',
+        icon: 'vuestic-iconset-dashboards',
       },
     },      
     {
       name: 'dashboard',
-      displayName: '사이트 정보',
+      displayName: '절세 솔루션',
       meta: {
-        // icon: 'vuestic-iconset-dashboard',
+        icon: 'vuestic-iconset-dashboards',
       },
     },     
+    {
+      name: 'dashboard',
+      displayName: '사이트 정보',
+      meta: {
+        icon: 'vuestic-iconset-dashboards',
+      },
+    },         
   ] as INavigationRoute[],
 }

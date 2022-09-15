@@ -2,31 +2,41 @@
     <div class="dashboard">
         <div class="grid row">
 
+            <div class="flex md12" style="height: 300px;"></div>
+            
             <div class="flex md6 offset--md3">
                 <div class="row column">
-                    <div class="flex">
                         <va-card>
                             <va-card-content>
                                 <div class="grid row">
                                 <div class="flex md12" style="text-align: center; font-size:24px;">
                                     약관 동의
                                 </div>
-                                <div class="flex md8 offset--md2">
-                                    <va-checkbox v-model="check_bank" label="은행정보 수집 이용동의 (필수)" class="mb-2" />
-                                    <va-checkbox v-model="check_card" label="카드사정보 수집 이용동의 (필수)" class="mb-2" />
-                                    <va-checkbox v-model="check_insurance" label="보험사정보 수집 이용동의 (필수)" class="mb-2" />
-                                    <va-checkbox v-model="check_stock" label="증권사정보 수집 이용동의 (필수)" class="mb-2" />
-                                    <va-checkbox v-model="check_tax" label="국세청정보 수집 이용동의 (필수)" class="mb-2" />
-                                </div>
+                                    <div style="width: 100%;">
+                                        <va-checkbox v-model="check_bank" label="은행정보 수집 이용동의 (필수)" class="mb-2" />
+                                    </div>
+                                    <div style="width: 100%;">
+                                        <va-checkbox v-model="check_card" label="카드사정보 수집 이용동의 (필수)" class="mb-2" />
+                                    </div>
+                                    <div style="width: 100%;">
+                                        <va-checkbox v-model="check_insurance" label="보험사정보 수집 이용동의 (필수)" class="mb-2" />
+                                    </div>
+                                    <div style="width: 100%;">
+                                        <va-checkbox v-model="check_stock" label="증권사정보 수집 이용동의 (필수)" class="mb-2" />
+                                    </div>
+                                    <div style="width: 100%;">
+                                        <va-checkbox v-model="check_tax" label="국세청정보 수집 이용동의 (필수)" class="mb-2" />
+                                    </div>
+                                
                             </div>
                             </va-card-content>
                         </va-card>
 
-                    </div>
 
                 </div>
             </div>
 
+            <div class="flex md12" style="height: 10px;"></div>
 
             <div class="flex xs12">
                 <div class="row">

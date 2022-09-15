@@ -2,6 +2,8 @@
     <div class="dashboard">
         <div class="grid row">
 
+            <div class="flex md12" style="height: 300px;"></div>
+
             <div class="flex md6 offset--md3">
                 <div class="row column">
                     <div class="flex">
@@ -9,7 +11,7 @@
                             <va-card-content>
                                 <div class="grid row">
                                     <div class="flex md12" style="text-align: center; font-size:24px;">
-                                        고객님의 정보를 입력하세요
+                                        <b>금세</b> 에 필요한 인건님의 정보를 입력해 주세요
                                     </div>
                                     <div class="flex md2">
                                         <div> 연소득 : </div>
