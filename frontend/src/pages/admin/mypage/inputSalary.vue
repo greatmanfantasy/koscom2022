@@ -6,7 +6,7 @@
                 <div class="row column">
                     <div class="flex">
                         <va-card>
-                            <va-card-title>연봉을 입력하세요</va-card-title>
+                            <va-card-title>고객님의 정보를 입력하세요</va-card-title>
                             <va-card-content>
                                 <div class="grid row">
                                     <div class="flex xs12 md1">
@@ -14,7 +14,6 @@
                                     </div>
 
                                     <div class="flex xs12 md6">
-
                                         <va-input v-model="salary" placeholder="연봉" />
                                     </div>
                                 </div>
@@ -27,10 +26,13 @@
             </div>
 
 
-            <div class="flex xs12 md12">
-                <va-button class="mr-2 mb-2" @click="onsubmit"> 다음 </va-button>
+            <div class="flex xs12">
+                <div class="row">
+                    <div style="position: relative; left: 50%; transform: translateX(-50%);">
+                        <va-button class="mr-2 mb-2" @click="onsubmit"> 다음 </va-button>
+                    </div>
+                </div>
             </div>
-
         </div>
 
     </div>
@@ -76,7 +78,13 @@ function onsubmit() {
             justify-content: space-between;
         }
     }
+
+    // .va-button {
+    //     color: #FFFFFF;
+    // }
 }
+
+// --va-button-color: #FFFFFF;
 
 // .text-align-center {
 //     text-align: center;

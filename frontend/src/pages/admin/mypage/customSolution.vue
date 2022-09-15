@@ -26,8 +26,12 @@
             </div>
 
 
-            <div class="flex xs12 md12">
-                <va-button class="mr-2 mb-2" @click="onsubmit"> 다음 </va-button>
+            <div class="flex xs12">
+                <div class="row">
+                    <div style="position: relative; left: 50%; transform: translateX(-50%);">
+                        <va-button class="mr-2 mb-2" @click="onsubmit"> 다음 </va-button>
+                    </div>
+                </div>
             </div>
 
         </div>
