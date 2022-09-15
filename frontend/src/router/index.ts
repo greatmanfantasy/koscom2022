@@ -7,6 +7,8 @@ import Page404Layout from '../layouts/Page404Layout.vue'
 import RouteViewComponent from '../layouts/RouterBypass.vue'
 import UIRoute from '../pages/admin/ui/route'
 
+import Dashboard from '../pages/admin/dashboard/Dashboard.vue'
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/:catchAll(.*)',
@@ -19,6 +21,42 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/login',
     redirect: { name: 'login' },
+  },
+  {
+    path: '/logintest',
+    component: Dashboard,
+  },
+  // 404 page
+  // {
+  //   path: '/prefix',
+  //   component: () => import('../pages/admin/test/Test.vue'),
+  // },
+  {
+    name: 'v1',
+    path: '/v1',
+    component: AppLayout,
+    children: [
+      {
+        name: 'mydata',
+        path: 'mydata',
+        component: () => import('../pages/admin/mypage/mydata.vue'),
+      },
+      {
+        name: 'input_salary',
+        path: 'input_salary',
+        component: () => import('../pages/admin/mypage/inputSalary.vue'),
+      },
+      {
+        name: 'anticipate',
+        path: 'anticipate',
+        component: () => import('../pages/admin/mypage/anticipate.vue'),
+      },   
+      {
+        name: 'custom_solution',
+        path: 'custom_solution',
+        component: () => import('../pages/admin/mypage/customSolution.vue'),
+      },           
+    ],
   },
   {
     name: 'admin',
