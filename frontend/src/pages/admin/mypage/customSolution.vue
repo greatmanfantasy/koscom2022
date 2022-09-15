@@ -73,6 +73,8 @@
                     <div class="flex">
                         <va-card>
                             <va-card-content>
+                                <img alt="금세" width="100" src="/title_icon.png">
+
                                 <div style="text-align: center; font-size:24px;">금세 솔루션을 통해</div>
                                 <div style="text-align: center; font-size:24px;">인건님은 최대</div>
                                 <div style="text-align: center; font-size:24px;">1,802,500 원</div>

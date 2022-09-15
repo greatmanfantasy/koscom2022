@@ -2,7 +2,7 @@
   <div class="auth-layout row align-content--center">
     <div class="flex xs12 pa-3 flex-center">
       <div class="flex-center" to="/">
-        <img alt="Vuestic UI Logo" width="100" src="/title_icon.png">
+        <img alt="금세" width="100" src="/title_icon.png">
         <vuestic-logo height="32" />        
       </div>
     </div>
