@@ -16,11 +16,8 @@
                                     </div>
 
                                     <div class="flex md8">
-                                        <va-input v-model="salary" placeholder="연봉" />
+                                        <va-input v-model="salary" placeholder="" />
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <va-checkbox v-model="checkbox_select" label="정보제공동의" class="mb-2" />
                                 </div>
                                     
                             </va-card-content>
@@ -46,7 +43,6 @@
   
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import {defineProps} from 'vue';
 const router = useRouter();
 
 function getStatusColor(status: string) {
@@ -65,11 +61,6 @@ function getStatusColor(status: string) {
 function onsubmit() {
     router.push({ name: 'terms_agree' })
 }
-
-const props = defineProps({
-    checkbox_select: Boolean,
-})
-
 
 </script>
   
