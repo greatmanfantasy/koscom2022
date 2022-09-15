@@ -10,7 +10,13 @@
             @click="isSidebarMinimized = !isSidebarMinimized"
           />
           <router-link to="/">
-            <vuestic-logo class="logo" />
+            <div class="row">
+              <img alt="Logo" width="55" src="/title_icon.png">
+              <div class="flex" style="width:10px; height: 100%;"></div>
+              <div class="flex" style="width:10px; height: 100%; margin: auto;">
+                <img alt="Logo" height="40" src="/title.png">
+              </div>
+            </div>
           </router-link>
         </div>
       </template>
